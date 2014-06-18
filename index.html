@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <title></title>
+        <style>
+            nav ul {
+                margin:0;
+                padding: 0;
+            }
+            nav ul li {
+                float: left;
+                list-style-type: none;            
+            }
+          
+            html,
+            body {
+                    margin:0;
+                    padding:0;
+                    min-height:100%;
+            }
+            body {
+                position: relative;
+            }
+            #wrapper {
+                    min-height:100%;
+                    position:relative;                   
+                    width:960px;
+                    margin: 0 auto;
+                    border-radius: 25px;
+            }
+            header {           
+                    width: 960px;
+                    height: 120px;
+                    margin: 0 auto;
+            }
+            section {
+                    padding-bottom:30px; /* Height of the footer element */
+                    width: 960px;
+                    margin: 0 auto;
+                     position: relative;
+                     height: 100%;
+            }
+            footer {
+                    width:100%;
+                    height:30px;
+                    position:absolute;
+                    bottom:0;
+            }
+            #footer{
+                    width: 960px;
+                    margin: 0 auto;
+                    height: 30px;
+            }
+            .content_box {
+                background: none repeat scroll 0 0 #fff;
+                border: 1px solid #ccc;
+                border-radius: 320px;
+                box-shadow: 0px 10px 45px #ccc;
+                height: 600px; 
+                margin: 0 auto;
+                padding: 20px;
+                width: 600px;
+                 
+                -webkit-transition: all 3s ease-in-out;
+                -moz-transition: all 3s ease-in-out;
+                -o-transition: all 3s ease-in-out;
+                transition: all 3s ease-in-out;
+            }
+            .content_box:hover {
+                background: rgba(15,115,221,0.5);
+                -webkit-transition: all 2s ease-in-out;
+                -moz-transition: all 2s ease-in-out;
+                -o-transition: all 2s ease-in-out;
+                transition: all 2s ease-in-out;
+            }
+            nav ul li.home {
+                border: 1px solid #ccc;
+                border-radius: 30px;
+                height: 130px;
+                width: 140px;
+                margin-right: 10px;
+                float: right;
+            }
+            nav ul li.home a{
+                background: url('images/home.png') no-repeat 0 0;
+                width: 127px;
+                height: 121px;
+                display: block;
+                margin: 3px 0 0 5px;
+            }
+            
+            nav ul li.about {
+                border: 1px solid #ccc;
+                border-radius: 30px;
+                float: left;
+                margin-left: -30px;
+                margin-top: 125px;
+                 width: 95px;
+                 height: 160px;
+            }
+            nav ul li.about a{
+                background: url('images/about.png') no-repeat 0 0;
+                 width: 85px;
+                 height: 155px;
+                display: block;
+                margin: 3px 0 0 5px;
+            }
+            nav ul li.work {
+                border: 1px solid #ccc;
+                border-radius: 30px;
+                float: left;
+                height: 140px;
+                margin-top: 510px;
+                width: 250px;
+            }
+            nav ul li.work a{
+                background: url('images/work.png') no-repeat 0 0;
+                 width: 245px;
+                 height: 133px;
+                display: block;
+                margin: 3px 0 0 5px;
+            }
+            /*  Header nav  */
+             header nav {
+                height: 100px;
+                position: fixed;
+                right: 0;
+                top: 40%;
+                width: 205px;
+             }
+            header nav ul.contacts{
+                width: 64px;
+                float: right;
+                height: 100px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                background: linear-gradient(rgba(234,254,223,0.6),rgba(76,93,38,0.7));
+            }
+            header nav ul.contacts:hover {
+                width: 205px;
+            }
+            ul.contacts li.contact {
+                height: 45px;
+                margin-left: 9px;
+                margin-top: 31px;
+                width: 50px;
+             }
+            ul.contacts li.contact a{
+                background: url('images/contact.png') no-repeat 0 0;
+                height: 43px;
+                width: 44px;
+                display: block; 
+            }
+            ul.contacts li.white_border {
+                width: 5px;
+                height: 100px;
+                background: #fff;
+            }
+            ul.contacts li.social {
+                display: none;
+                margin-top: 33px;
+                padding-left: 5px;
+            }
+            li.social ul li.facebook, li.social ul li.linkedin, li.social ul li.skype {
+                width: 35px;
+                height: 35px;
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+            li.social ul li.facebook a, li.social ul li.linkedin a, li.social ul li.skype a {
+                display: block;
+                width: 32px;
+                height: 32px;
+            }
+            li.social ul li.facebook a {
+                background: url('images/fb.png') no-repeat top left;
+            }
+            li.social ul li.linkedin a {
+                background: url('images/linkedin.png') no-repeat top left;
+            }
+            li.social ul li.skype a {
+                background: url('images/skype.png') no-repeat top left;
+            }
+            /*  Rotate images  */
+            .rotate {
+                -webkit-transition-duration: 1s;
+                -moz-transition-duration: 1s;
+                -o-transition-duration: 1s;
+                transition-duration: 1s;
+                 
+                -webkit-transition-property: -webkit-transform;
+                -moz-transition-property: -moz-transform;
+                -o-transition-property: -o-transform;
+                transition-property: transform;
+                 
+                overflow:hidden;
+            }  
+            .rotate:hover {
+                -webkit-transform:rotate(360deg) scale(1.5);
+                -moz-transform:rotate(360deg) scale(1.5);
+                -o-transform:rotate(360deg) scale(1.5);
+            }   
+        </style>
+<script style="text/javascript">
+            jQuery(document).ready(function($){
+                $('#test').hover(function(){
+                        $('#test').addClass('test-grey');
+                        //$('.menu').effect( "slide", {}, 1500);
+                }, function() {
+                    $('#test').removeClass('test-grey');
+                    
+                })
+               $('ul.contacts').hover(function(){
+                    $('ul.contacts li.social').css('display','block');
+               }, function() {
+                    $('ul.contacts li.social').css('display','none');
+               })
+            });
+        </script>
+    </head>
+    <body>
+       <div id="wrapper">
+                <header>
+                    <nav>
+                        <ul class="contacts">
+                            <li class="contact"><a href="#"></a></li>
+                            <li class="white_border"></li>
+                            <li class="social">
+                                <ul>
+                                    <li class="facebook"><a href="http://facebook.com"></a></li>
+                                    <li class="linkedin"><a href="http://linkedin.com"></a></li>
+                                    <li class="skype"><a href="#"></a></li>
+                                </ul>
+                            </li>
+                        </ul>                      
+                       
+                    </nav>
+
+                </header>              
+                <section>
+                  <div class="content_box" id="test">
+                            <nav style="display: block;" class="menu">
+                                <ul>
+                                    <li class="home rotate"><a href="#"></a></li>
+                                    <li class="about rotate"><a href="#"></a></li>
+                                    <li class="work rotate"><a href="#"></a></li>
+                                </ul>
+                            </nav>
+                                     
+                                 
+                
+                    </div>
+                </section>
+                <footer>
+                    <div id="footer">
+                        
+                    </div>
+                </footer>
+
+    </body>
+</html>
