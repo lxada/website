@@ -23,6 +23,7 @@
             }
             body {
                 position: relative;
+                background: linear-gradient(#fff,rgba(183,235,253,0.5));
             }
             #wrapper {
                     min-height:100%;
@@ -55,8 +56,8 @@
                     height: 30px;
             }
             .content_box {
-                background: none repeat scroll 0 0 #fff;
-                border: 1px solid #ccc;
+                background: #fff;
+                border: 1px solid rgba(0,111,148,0.1);
                 border-radius: 320px;
                 box-shadow: 0px 10px 45px #ccc;
                 height: 600px; 
@@ -70,58 +71,131 @@
                 transition: all 3s ease-in-out;
             }
             .content_box:hover {
-                background: rgba(15,115,221,0.5);
+                background: rgba(0,111,148,0.3);
                 -webkit-transition: all 2s ease-in-out;
                 -moz-transition: all 2s ease-in-out;
                 -o-transition: all 2s ease-in-out;
                 transition: all 2s ease-in-out;
             }
+            nav.menu ul {
+                height: 105px;
+                margin-left: 115px;
+                width: 365px;
+            }
             nav ul li.home {
-                border: 1px solid #ccc;
                 border-radius: 30px;
-                height: 130px;
-                width: 140px;
-                margin-right: 10px;
-                float: right;
+                float: left;
+                height: 100px;
+                width: 120px;
             }
             nav ul li.home a{
-                background: url('images/home.png') no-repeat 0 0;
-                width: 127px;
-                height: 121px;
+                background: url('images/icon1.png') no-repeat 0 0;
                 display: block;
-                margin: 3px 0 0 5px;
-            }
-            
+                height: 99px;
+                width: 120px;
+            }           
             nav ul li.about {
-                border: 1px solid #ccc;
                 border-radius: 30px;
                 float: left;
-                margin-left: -30px;
-                margin-top: 125px;
-                 width: 95px;
-                 height: 160px;
+                height: 97px;
+                width: 120px;
             }
             nav ul li.about a{
-                background: url('images/about.png') no-repeat 0 0;
-                 width: 85px;
-                 height: 155px;
+                background: url('images/about1.png') no-repeat 0 0;
                 display: block;
-                margin: 3px 0 0 5px;
+                height: 100px;
+                width: 120px;
             }
             nav ul li.work {
-                border: 1px solid #ccc;
                 border-radius: 30px;
                 float: left;
-                height: 140px;
-                margin-top: 510px;
-                width: 250px;
+                height: 100px;
+                width: 125px;
             }
             nav ul li.work a{
-                background: url('images/work.png') no-repeat 0 0;
-                 width: 245px;
-                 height: 133px;
+                background: url('images/work1.png') no-repeat 0 0;
+                 width: 120px;
+                 height: 98px;
                 display: block;
-                margin: 3px 0 0 5px;
+            }
+            section .circle {
+                border-radius: 65px;
+                box-shadow: 4px 6px 9px #ccc;
+                height: 70px;
+                left: -50px;
+                position: absolute;
+                top: 0;
+                width: 70px;
+                background: #fff;
+            }
+            section .circle1 {
+                border-radius: 65px;
+                height: 120px;
+                left: 75px;
+                position: absolute;
+                top: 260px;
+                width: 120px;
+                background: rgba(0,111,148,0.2);
+                box-shadow: 0px 10px 45px #ccc;
+            }
+            section .circle2 {
+                border-radius: 80px;
+                height: 145px;
+                left: -55px;
+                position: absolute;
+                top: 425px;
+                width: 145px;
+                background: rgba(0,111,148,0.5);
+                box-shadow: 6px 13px 8px #ccc;
+            }
+            section .circle3 {
+                border-radius: 65px;
+                height: 120px;
+                left: 180px;
+                position: absolute;
+                top: 600px;
+                width: 120px;
+                background: rgba(0,111,148,0.7);
+                box-shadow: 0px 10px 45px #ccc;
+            }
+            section .circle4 {
+                border-radius: 35px;
+                height: 70px;
+                position: absolute;
+                right: 0;
+                top: 114px;
+                width: 70px;
+                background: rgba(0,111,148,0.5);
+                box-shadow: 6px 5px 8px #ccc;
+            }
+            section .circle5 {
+                border-radius: 65px;
+                height: 120px;
+                position: absolute;
+                right: -110px;
+                top: 260px;
+                width: 120px;
+                background: rgba(0,111,148,0.2);
+            }
+            section .circle6 {
+                border-radius: 70px;
+                height: 140px;
+                position: absolute;
+                right: 120px;
+                top: 370px;
+                width: 140px;
+                background: rgba(0,111,148,0.7);
+                box-shadow: 0px 10px 45px #ccc;
+            }
+            section .circle7 {
+                border-radius: 30px;
+                bottom: 70px;
+                height: 55px;
+                position: absolute;
+                right: -60px;
+                width: 55px;
+                background: rgba(0,111,148,0.5);
+                box-shadow: 6px 6px 8px #ccc;
             }
             /*  Header nav  */
              header nav {
@@ -137,7 +211,7 @@
                 height: 100px;
                 border-top-left-radius: 20px;
                 border-bottom-left-radius: 20px;
-                background: linear-gradient(rgba(234,254,223,0.6),rgba(76,93,38,0.7));
+                background: linear-gradient(rgba(0,220,255,0.6),rgba(0,111,148,0.7));
             }
             header nav ul.contacts:hover {
                 width: 205px;
@@ -199,9 +273,9 @@
                 overflow:hidden;
             }  
             .rotate:hover {
-                -webkit-transform:rotate(360deg) scale(1.5);
-                -moz-transform:rotate(360deg) scale(1.5);
-                -o-transform:rotate(360deg) scale(1.5);
+                -webkit-transform:rotate(360deg) scale(1.2);
+                -moz-transform:rotate(360deg) scale(1.2);
+                -o-transform:rotate(360deg) scale(1.2);
             }   
         </style>
 <script style="text/javascript">
@@ -219,7 +293,7 @@
                     $('ul.contacts li.social').css('display','none');
                })
             });
-        </script>
+</script>
     </head>
     <body>
        <div id="wrapper">
@@ -235,10 +309,8 @@
                                     <li class="skype"><a href="#"></a></li>
                                 </ul>
                             </li>
-                        </ul>                      
-                       
+                        </ul>                                            
                     </nav>
-
                 </header>              
                 <section>
                   <div class="content_box" id="test">
@@ -249,10 +321,15 @@
                                     <li class="work rotate"><a href="#"></a></li>
                                 </ul>
                             </nav>
-                                     
-                                 
-                
                     </div>
+                  <div class="circle"></div>
+                  <div class="circle1"></div>
+                  <div class="circle2"></div>
+                  <div class="circle3"></div>
+                  <div class="circle4"></div>
+                  <div class="circle5"></div>
+                  <div class="circle6"></div>
+                  <div class="circle7"></div>
                 </section>
                 <footer>
                     <div id="footer">
