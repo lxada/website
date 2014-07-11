@@ -1,4 +1,4 @@
- nav ul {
+           nav ul {
                 margin:0;
                 padding: 0;
             }
@@ -20,31 +20,43 @@
             #wrapper {
                     min-height:100%;
                     position:relative;                   
+                    width:1400px;
+                    margin: 0 auto;
+                    border: 1px solid red;
+            }
+            #wrapperContent {
+                    min-height:100%;
+                    position:relative;                   
                     width:960px;
                     margin: 0 auto;
-                    border-radius: 25px;
+                    border: 1px solid blue;              
             }
             header {           
                     width: 960px;
                     height: 80px;
                     margin: 0 auto;
+                    border: 1px solid orange !important;
             }
             section.main_section {
-                    padding: 70px 0 30px; /* Height of the footer element */
+                    padding: 70px 0 80px; /* Height of the footer element */
                     width: 960px;
+                    position: relative;
+                    overflow: hidden;
                     margin: 0 auto;
                     height: 100%;
             }
             footer {
-                    width:100%;
-                    height:30px;
-                    position:absolute;
-                    bottom:0;
+                   clear: both;
+                   overflow: hidden;
+                   padding: 0;
+                   height: 60px;
+                   border: 1px solid green !important;
             }
             #footer{
                     width: 960px;
                     margin: 0 auto;
                     height: 30px;
+                    padding: 30px 0;
             }
             #wrapper header h1{
                     width:  290px;
@@ -180,7 +192,6 @@
             }
             .content_box .about_me .about_me_content h1 {
                color: #00465d;
-               text-shadow: 1px 4px 3px #78b4c8;
                font-size: 18px;
                margin-bottom: 15px;
             }
@@ -226,6 +237,7 @@
                font-size: 18px;
                font-weight: bold;
                text-decoration: none;
+               outline: none;
             }
             #wrapper .circle2 a {
                color: #00465d;
@@ -305,10 +317,10 @@
             }
             #wrapper .circle8 {
                 border-radius: 50%;
-                bottom: 0;
+                bottom: 65px;
                 box-shadow: 4px 6px 9px #ccc;
                 float: left;
-                left: -40px;
+                left: -60px;
                 height: 45px;
                 position: absolute;
                 width: 45px;
@@ -400,4 +412,8 @@
                 -webkit-transform: translateY(65px) scale(1.2);
                 -moz-transform: translateY(65px) scale(1.2);
                 -o-transform: translateY(65px) scale(1.2);
+            }
+            #footer p {
+               float: right;
+               color: #00465d;
             }
